@@ -32,6 +32,30 @@ Upon importing the data, Row Index, Customer ID, and Surname were all removed, a
 
 To gain initial impressions on the factors that might impact churn, several bar plots were made, taking each potential value for every categorical feature, calculating the % of customers with any given value who churned, and plotting it. It appears that whether or not a customer is from Germany has a significant impact on the churn rate of customers, and that females are more likely to churn than males.
 
+![image](https://user-images.githubusercontent.com/91287263/206082233-9b7f2b39-e1b4-4d5e-91e0-9e18d5b555e7.png)
+
+It appears there is a slight decrease in overall churn rates as tenure increases. Customers who purchase only 1 or 2 products from the bank are much less likely to churn than those who purchased 3-4 products.
+
+![image](https://user-images.githubusercontent.com/91287263/206082473-c57df201-4633-4c33-9e3d-807c2b5519ea.png)
+
+While having a credit card had no discernible impact on churn, customers who were not active members were more likely to churn. (0=No, 1=Yes)
+
+![image](https://user-images.githubusercontent.com/91287263/206083260-d77cc2de-24d5-4239-b5c6-24c18d7df2f9.png)
+
+To check for multicollinearity of continuous variables, a pairplot was made. However, instead of finding multicollinearty, it appeared as though there may be an association between having no money in an account and churn. To check, a bar char was made.
+
+![image](https://user-images.githubusercontent.com/91287263/206083479-0cc457de-c33a-4568-9352-5c27c0b70964.png)
+
+It seems as though people were more likely to churn given they had any money at all in their bank account. As there does not appear to be a significant relationship between churn and balance for those who do have money in their accounts, Balance will instead become a categorical variable, denoting only whether or not a particular customer has any balance at all.
+
+After removing all data points with no balance, multicollinearty was checked for again:
+
+![image](https://user-images.githubusercontent.com/91287263/206083902-bdfa9b28-c2f8-4233-b8b1-9cafc0633913.png)
+
+While no multicollinearity was found, it was observed that age seems to impact churn, with older customers being more likely to.
+
+![image](https://user-images.githubusercontent.com/91287263/206083792-d732875f-a78a-4ad7-93b4-70a94dd74c03.png)
+
 
 
 
