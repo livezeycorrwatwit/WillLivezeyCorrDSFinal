@@ -92,8 +92,16 @@ As older customers tended to churn more often and age was significant in its imp
 
 According to a seperate source, Poor customer service can also cause higher customer churn. Within this data set, there is a lack of sentimental data and feedback from consumers. Perhaps acquiring feedback on customer experience working with the bank and performing analysis on their complaints could provide insight into how to further mitigate churn.
 
+REFERENCES:
 
+Potential Reasons for Customer Churn:
+Reich, Pamela, et al. “Top Reasons Why Customers Switch Banks.” BAI, 15 Sept. 2022, https://www.bai.org/banking-strategies/top-reasons-why-customers-switch-banks/#:~:text=Fraud%20management,consumers%20would%20leave%20their%20bank. 
 
+Guide used for implementing KNN test, and was modified for other classifiers:
+dom12345. “Feature Selection and KNN Classification.” Kaggle, Kaggle, 20 Dec. 2016, https://www.kaggle.com/code/dom12345/feature-selection-and-knn-classification/notebook. 
+
+Tutorial I Used for Discovering Feature Importance:
+Perry, Jonathan. “How to Find Feature Importance in Your Model.” YouTube, YouTube, 22 Aug. 2020, https://www.youtube.com/watch?v=IhSWvwmpwTU. 
 
 
 
