@@ -52,9 +52,38 @@ After removing all data points with no balance, multicollinearty was checked for
 
 ![image](https://user-images.githubusercontent.com/91287263/206083902-bdfa9b28-c2f8-4233-b8b1-9cafc0633913.png)
 
-While no multicollinearity was found, it was observed that age seems to impact churn, with older customers being more likely to.
+While no multicollinearity was found, it was observed that age seems to impact churn, with older customers being more likely to churn.
 
-![image](https://user-images.githubusercontent.com/91287263/206083792-d732875f-a78a-4ad7-93b4-70a94dd74c03.png)
+![image](https://user-images.githubusercontent.com/91287263/206084752-d4d0479f-04be-4651-912d-b666770eea25.png)
+
+At long last, feature selection. Columns unrelated to churn (Credit score, Having a Credit Card, Estimated Salary) are removed. The columns Gender and Geography are encoded in terms of 0 and 1, as the classification algorithms we will be using cannot interpret non numerical data. Ultimately, we end up with a column "Female" (0 if not female, 1 otherwise) and "IsGermany" (0 if not Germany, 1 otherwise). As Spain and France were similar in their impact on churn, all that matters for analysis is whether a customer is from Germany. All other factors remain the same, if they were not dropped. Some columns were renamed for clarity.
+
+## Methods
+
+With our data finally selected and tweaked, it is time to see if an accurate model predicting churn per each tenure year can be made. As a customer can either churn or not, we can use classification algorithms to predict churn based on our factors impacting it. The models in use included the RandomForest, LogisticRegression, NaiveBayers, and DecisionTree classifiers.
+
+![image](https://user-images.githubusercontent.com/91287263/206086041-c444ec8f-ba65-4a56-aca2-528fcfeded57.png)
+
+Running each test on different training/test data splits 40 times per tenure and averaging the results gave a good indication of the accuracy of each model. However, I also wanted to run the KNN classifier algorithm, which requires more steps to determine an optimal number of nearby neighbors to use for classification.
+
+![image](https://user-images.githubusercontent.com/91287263/206086402-0b30be3c-bf74-4a6b-8c3d-9787c298dd87.png)
+
+![image](https://user-images.githubusercontent.com/91287263/206087010-88e09791-56af-4614-a8bd-4fccfebbc8d5.png)
+
+Plotting the maximum attained average accuracy per neighbor paramter revealed an optimal neighbor count of 17
+
+![image](https://user-images.githubusercontent.com/91287263/206087164-be9b07d4-d6d6-4908-84e4-936b85095a31.png)
+
+After acquiring a potential optimal neighbor count, using the same trial methodology for the other types of classification algorithms gave the KNN model an accuracy prediction. The final results are below.
+
+## Results
+
+
+
+
+
+
+
 
 
 
