@@ -78,11 +78,19 @@ After acquiring a potential optimal neighbor count, using the same trial methodo
 
 ## Results
 
+![image](https://user-images.githubusercontent.com/91287263/206087676-fac938e2-36e0-44c3-8a4c-fcad306ce53d.png)
 
+Of all the potential classification algorithms, the KNN analysis yielded the highest average accuracy, at 85.7%, which is rather reliable. To determine the most important factors of all in predicting churn rate, a permutation model of feature importance was run, plotting its results on a bar graph. Larger bars correspond to greater feature importance:
 
+![image](https://user-images.githubusercontent.com/91287263/206088170-cbc1976f-7ea8-480b-929a-50a0341b432d.png)
 
+The most important factors in predicting churn are the Number of Products bought, Age, whether a customer lived in Germany, and whether or not a customer was an active member.
 
+## Discussion
 
+As older customers tended to churn more often and age was significant in its impact on customer churn rates, this bank should perhaps create a program that offers benefits to its older members. People who purchased more bank products were naturally expected to churn at a greater frequency, as there were more products to end subscriptions on. It is likely inevitable this will always be the case, however, it can be ameliorated by offering financial bonuses to those who have multiple products. As customers in Germany experienced higher churn rates, perhaps opening more bank locations in Germany would be prudent, as it is possible customers are leaving due to more convenient alternatives. Finally, it appears important that the bank goes out of its way to contact inactive members and discern their reasons for inactivity, as inactive customers are more likely to churn.
+
+According to a seperate source, Poor customer service can also cause higher customer churn. Within this data set, there is a lack of sentimental data and feedback from consumers. Perhaps acquiring feedback on customer experience working with the bank and performing analysis on their complaints could provide insight into how to further mitigate churn.
 
 
 
